@@ -47,7 +47,7 @@ html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10
 
 html, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
-body { margin: 0; font-size: 1em; line-height: 1.4; }
+body { margin: 0; font-size: 1em; line-height: 1.4; background:#FAE498; }
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -232,65 +232,44 @@ td { vertical-align: top; }
    ========================================================================== */
 
 
+/* LAYOUT (WIDTHS) ======================================================= */
 
-/* HEADER BANNER ======================================================= */
-header {
-	width:100%;
+
+header, div.content, footer {
+	width:800px;
 	margin:0 auto;
 	height:auto;
 	position:relative;
+	padding:25px;
+	border-right:1px solid #fff;
+	border-left:1px solid #fff;
 }
-#home-page header {
-	min-height:410px;
+
+/* HEADER / BANNER ======================================================= */
+header {
+	background:#3ABEF1;
 }
-header h1, header h2 {
-	display:block;
-	margin-right:auto;
-	margin-left: auto;
-}
+
 header h1 {
-	width:150px;
-	position:relative;
-	top:20px;
-	color:#ED1C24;
-	text-align:center;
-	z-index:20;
-	text-transform:uppercase;
-	font-size:1em;
+
 }
 header a#logo-link {
-	display:block;
-	margin:0 auto;
-	width:150px;
-	height:150px;
-	position:relative;
-	color:#ED1C24;
-	z-index:30;
-	background: transparent url('../img/logo.png') top left no-repeat;
-}
-.multiplebgs header h2, .multiplebgs .banner-bg {
-	background:	
-	 			url('../img/banner-bg-left.png') top left no-repeat, 
-				url('../img/banner-bg-right.png') top right no-repeat,
-				url('../img/banner-bg-center.png') top center no-repeat;
+	color:#6A00D6;
 }
 header h2 {
-	width:312px;
-	margin:0 auto;
-	height:35px;
-	text-align:center;
-	background:transparent url('../img/bannerbg.png') top center repeat-x;
-	position:relative;
-	z-index:255;
+
 }
 
+/* MAIN CONTENT ======================================================= */
 
-div#featured-product {
-	width:45%;
-	margin-top:15%;
-	margin-right:15%;
-	float:right;
-	clear:both;
+div.content {
+	background:#E6EDF4;
+}
+
+div#featured-kitten {
+	width:400px;
+	margin-top:20px;
+	float:left;
 	background:#bfd730;
 	text-align:right;
 	padding:10px;
@@ -299,24 +278,38 @@ div#featured-product {
     opacity: 0.9;
 
 }
-header h3 {
+#featured-kitten h3 {
 	font-size:1em;
 	text-align:right;
 	font-style:italic;
 	color:#fff;
 	margin:0;
 }
-h4.featured-product {
+h4.featured-kitten {
 	margin:0;
 }
-header h5 {
+#featured-kitten h5 {
 	margin:0;
 }
 
+div#kitten-grid {
+	float:left;
+	width:350px;
+}
+
+div#kitten-grid .kitten {
+	float:left;
+	width:165px;
+	height:auto;
+}
 
 
+/* FOOTER ======================================================= */
 
 
+footer {
+	background:#3ABEF1;
+}
 
 
 
