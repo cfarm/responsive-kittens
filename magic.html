@@ -11,11 +11,15 @@
   <title>Responsive Kittens!</title>
   <meta name="description" content="">
 
-  <!--RWD Workshop: meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0" -->
+  <!-- RWD Workshop: Viewport meta tag
+
+ meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0" -->
 
   <link rel="stylesheet" href="css/style.css">
 
-<!-- For iPhone 4 
+<!-- RWD Workshop: Touch icons
+
+For iPhone 4 
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.loylewis.com/img/touch-icon1.png"-->
 <!-- For iPad 1
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.loylewis.com/img/touch-icon2.png"-->
@@ -29,8 +33,72 @@
 </head>
 <body>
 
-<header >
-  <!-- Add your site or application content here -->
+
+	<header role="banner" class="clearfix">
+		<a href="/" id="logo-link"><h1>Responsive Kittens</h1></a>
+		<h2>Kittens and unicorns in magical harmony.</h2>
+
+		<div id="featured-product">
+	<h3>Featured Kitten:</h3>
+		 <a href="http://placekitten.com/400/300" title="View Featured Kitten"><h4 class="featured-product">Cute, but am I magically responsive?</h4></a>	
+	<h5 class="shop-link"><a href="icanhascheezburger.com">More cute kittens &rarr;</a></h5>
+		</div><!-- featured-product -->
+
+		</header>
+		
+			<nav role="navigation">
+			<ul class="clearfix">
+				<li class="banner-bg"><a href="http://loylewis.bigcartel.com">Home</a></li>
+				<li class="banner-bg"><a href="http://loylewis.bigcartel.com/about/">About Loy Lewis</a></li>
+				<li class="banner-bg"><a href="http://loylewis.bigcartel.com/contact/">Contact</a></li>
+				<li class="banner-bg"><a href="http://loylewis.bigcartel.com/cart/">View Shopping Cart</a></li>
+				<li class="banner-bg"><a href="http://loylewis.bigcartel.com/checkout/">Checkout</a></li>
+			</ul>
+			</nav>	
+		
+
+		<div class="content clearfix">
+
+		<div role="main" class="clearfix products">
+
+			<h2 class="banner-bg"><a href="/" class="shop-jewelry">Our Fabulous Kittens:</a></h2> 
+
+			<div id="product-1" class="product">
+				    <a href="http://placekitten.com/160/160" title="Basket of Kittens" class="product-a">
+				      <img class="product-img" src="http://placekitten.com/160/160" alt="Basket of Kittens" />
+				      <div class="product-info"><h3 class="product-title"><span>Basket of Kittens &rarr;</span></h3></div>
+				    </a>
+				<p class="view-link"><a href="http://lolcats.icanhascheezburger.com/?s=basket">More Kittens in Baskets &rarr;</a></p>
+				  </div>
+
+		  <div id="product-1" class="product">
+		    <a href="http://placekitten.com/160/162" title="Pensive Kitten" class="product-a">
+		      <img class="product-img" src="http://placekitten.com/160/162" alt="Pensive Kitten" />
+		      <div class="product-info"><h3 class="product-title"><span>Pensive Kitten &rarr;</span></h3></div>
+		    </a>
+		<p class="view-link"><a href="http://lolcats.icanhascheezburger.com/?s=smart">More Smart Kittens &rarr;</a></p>
+		  </div>
+
+		  <div id="product-1" class="product">
+		    <a href="http://placekitten.com/160/158" title="The Fearless Yet Elusive Snow Kitten" class="product-a">
+		      <img class="product-img" src="http://placekitten.com/160/158" alt="The Fearless Yet Elusive Snow Kitten" /><span class="stilt"></span>
+		      <div class="product-info"><h3 class="product-title"><span>The Fearless Yet Elusive Snow Kitten &rarr;</span></h3></div>
+		    </a>
+		<p class="view-link"><a href="http://lolcats.icanhascheezburger.com/?s=snow">More Snowy Kittens &rarr;</a></p>
+		  </div>
+		
+		
+		</div><!-- div role=main -->
+
+		</div><!-- div .content -->
+
+
+	
+		<footer role="contentinfo" class="clearfix">
+			&copy; 2012 Responsive Kittens Inc. <a href="http://www.cfarman.com">Contact Responsive Kittens and get some Responsive Web Magic of your own</a>.
+		</footer>
+
+
 
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>

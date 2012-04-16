@@ -1,5 +1,5 @@
 /*
- * HTML5 Boilerplate
+ * RESPONSIVE KITTENS	(Based on HTML5 Boilerplate)
  *
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -215,12 +215,90 @@ td { vertical-align: top; }
 
 
 /* ==|== primary styles =====================================================
-   Author:
+   Author: Catherine Farman cfarman.com
    ========================================================================== */
 
 
 
+/* HEADER BANNER ======================================================= */
+header {
+	width:100%;
+	margin:0 auto;
+	height:auto;
+	position:relative;
+}
+#home-page header {
+	min-height:410px;
+}
+header h1, header h2 {
+	display:block;
+	margin-right:auto;
+	margin-left: auto;
+}
+header h1 {
+	width:150px;
+	position:relative;
+	top:20px;
+	color:#ED1C24;
+	text-align:center;
+	z-index:20;
+	text-transform:uppercase;
+	font-size:1em;
+}
+header a#logo-link {
+	display:block;
+	margin:0 auto;
+	width:150px;
+	height:150px;
+	position:relative;
+	color:#ED1C24;
+	z-index:30;
+	background: transparent url('../img/logo.png') top left no-repeat;
+}
+.multiplebgs header h2, .multiplebgs .banner-bg {
+	background:	
+	 			url('../img/banner-bg-left.png') top left no-repeat, 
+				url('../img/banner-bg-right.png') top right no-repeat,
+				url('../img/banner-bg-center.png') top center no-repeat;
+}
+header h2 {
+	width:312px;
+	margin:0 auto;
+	height:35px;
+	text-align:center;
+	background:transparent url('../img/bannerbg.png') top center repeat-x;
+	position:relative;
+	z-index:255;
+}
 
+
+div#featured-product {
+	width:45%;
+	margin-top:15%;
+	margin-right:15%;
+	float:right;
+	clear:both;
+	background:#bfd730;
+	text-align:right;
+	padding:10px;
+	zoom: 1;
+    filter: alpha(opacity=90);
+    opacity: 0.9;
+
+}
+header h3 {
+	font-size:1em;
+	text-align:right;
+	font-style:italic;
+	color:#fff;
+	margin:0;
+}
+h4.featured-product {
+	margin:0;
+}
+header h5 {
+	margin:0;
+}
 
 
 

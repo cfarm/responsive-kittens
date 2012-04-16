@@ -1,0 +1,2072 @@
+/* _________________________________________________
+
+LoyLewis.com - based on boilerplate 320 and Up http://stuffandnonsense.co.uk/projects/320andup/
+Author: Catherine Farman
+URL: http://www.cfarman.com
+_____________________________________________________
+
+1 ROOT
+2 HEADINGS
+3 TYPOGRAPHY
+4 LINKS
+5 FIGURES & IMAGES
+6 TABLES
+7 FORMS
+8 BANNER
+9 NAVIGATION
+10 CONTENT
+11 MAIN
+12 COMPLEMENTARY
+13 CONTENTINFO
+14 GLOBAL OBJECTS
+15 VENDOR-SPECIFIC 
+16 MODERNIZR
+17 TEMPLATE SPECIFICS
+18 MEDIA QUERIES
+
+COLORS 
+
+*/
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { 
+display : block; }
+
+audio[controls], canvas, video { 
+display : inline-block; 
+*display : inline; 
+*zoom : 1; }
+
+/* 1. ROOT ============================================================================= */
+
+html {
+overflow-y : scroll;
+background : #fff; 
+}
+html.multiplebgs {
+	background: 
+	url('../img/bg-arrow.png') top left repeat-x,
+	url('../img/bg.png') repeat;
+}
+html.no-multiplebgs {
+	background: #fff url('../img/bg-arrow.png') top left repeat-x;
+}
+body { 
+margin : 0 auto;
+padding : 0;
+width : 100%;
+font : 100%/1.4 Cambria, Times, "Times New Roman", sans-serif;
+color : rgb(40,40,40); 
+}
+/*body#home-page header {
+background:  url('../img/hero-border.png') 50% 15px no-repeat; 
+background-size:auto;
+ url('../img/hero-jewelry-320-2.jpg') 50% 40px no-repeat;
+			url('../img/hero-jewelry-320-glow.png') top center no-repeat;
+}*/
+html.no-multiplebgs body#home-page {
+	background: transparent url('../img/hero-jewelry-320-2.jpg') 50% 40px no-repeat,
+}
+button, 
+input, 
+select, 
+textarea { 
+font-family : "Helvetica Neue", Helvetica, Arial, sans-serif; 
+color : rgb(40,40,40); }
+
+/* 2. HEADINGS (320 and Up typography defaults) ==================================================== */
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+font-family : proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-weight : bold; }
+
+h1 { 
+margin-bottom : .75em;
+font-size : 3em; /* 48 / 16 = 3 */
+line-height : 1.2; }
+
+h2, .banner-bg { 
+font-family: chaparral-pro, Times, "Times New Roman", sans-serif;	
+font-weight:600;
+font-style:normal;
+margin-bottom : .75em;
+font-size : 1.5em; 
+line-height : 1.2; }
+
+h2.page-title {
+font-weight:normal;
+padding: 15px 15px 5px 15px;
+text-align:center;
+}
+
+h3 { 
+margin-bottom : 1em;
+font-size : 1.5em; /* 24 / 16 = 1.5 */
+line-height : 1.3; }
+
+h4 { 
+margin-bottom : 1.25em;
+font-size : 1.25em; /* 20 / 16 = 1.25 */
+line-height : 1.25; }
+
+h4.banner-bg {
+	font-size:.9em;
+	text-align:center;
+	padding-top:5px;
+}
+
+h5 { 
+margin-bottom : 1.5em;
+font-size : 1em; /* 16 / 16 = 1 */ }
+
+h6 { 
+font-size : 1em; /* 16 / 16 = 1 */ }
+
+/* 3. TYPOGRAPHY  ============================================================================= */
+
+p, 
+ol, 
+ul, 
+dl, 
+address { 
+margin-bottom : 1.5em; 
+font-size : 1em; /* 16 / 16 = 1 */ }
+
+p {
+hyphens : auto; 
+text-align : justify; }
+
+ul, 
+ol { 
+margin : 0 0 1.5em -24px; 
+padding : 0 0 0 24px; }
+
+li ul, 
+li ol { 
+margin : 0;
+font-size : 1em; /* 16 / 16 = 1 */ }
+
+dl, 
+dd { 
+margin-bottom : 1.5em; }
+
+dt { 
+font-weight : normal; }
+
+blockquote  { 
+margin : 0 0 1.5em -24px; 
+padding-left : 24px; 
+border-left : 1px solid rgb(200,200,200);
+font-style : italic; }
+
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {
+content : '';
+content : none; }
+
+abbr[title] { 
+border-bottom : 1px dotted; 
+cursor : help; }
+
+b, strong { 
+font-weight : bold; }
+
+dfn { 
+font-style : italic; }
+
+hr { 
+display : block; 
+margin : 1em 0; 
+padding : 0;
+height : 1px; 
+border : 0; 
+border-top : 1px solid rgb(204,204,204); }
+
+ins { 
+background-color : rgb(240,240,240); 
+color : rgb(0,0,0); 
+text-decoration : none; }
+
+mark { 
+background-color : rgb(240,240,240); 
+color: rgb(0,0,0); 
+font-style : italic; 
+font-weight : bold; }
+
+pre, 
+code, 
+kbd, 
+samp { 
+font-family : monospace, monospace; 
+_font-family : 'courier new', monospace; 
+font-size : .875em; 
+line-height : 1.5; }
+
+pre { 
+white-space : pre; 
+white-space : pre-wrap; 
+word-wrap : break-word; }
+
+q { 
+quotes : none; }
+
+q:before, 
+q:after { 
+content : ""; 
+content : none; }
+
+small { 
+font-size : 1em; /* 16 / 16 = 1 */ }
+
+sub, sup { 
+font-size : 75%; 
+line-height : 0; 
+position : relative; 
+vertical-align : baseline; }
+
+sup { 
+top : -.5em; }
+
+sub { 
+bottom : -.25em; }
+
+
+
+/* 4.LINKS ============================================================================= */
+
+a, a:visited { 
+color : rgb(23,119,175); }
+
+a:focus { 
+outline : thin dotted; 
+color : rgb(0,0,0); }
+
+a:hover, 
+a:active { 
+outline : 0;
+background-color: #bfd730; }
+
+/* 5.FIGURES & IMAGES ============================================================================= */
+
+figure {
+margin-bottom : 1.5em; }
+
+figure img,
+figure object,
+figure embed {
+margin-bottom : .75em;
+max-width : 100%; }
+
+figcaption {
+display : block;
+font-weight : normal; }
+
+img {
+border : 0; }
+
+svg:not(:root) {
+overflow : hidden; }
+
+/* 6.TABLES ============================================================================= */
+
+table { 
+border-collapse : collapse;
+border-spacing : 0;
+margin-bottom : 1.4em; 
+width : 100%;
+font-size : .875em; /* 14 / 16 = .875 */ }
+
+th, td, caption { 
+padding : .25em 10px .25em 5px; }
+
+tfoot { 
+font-style : italic; }
+
+caption { 
+background-color : transparent; }
+
+/* 7.FORMS ============================================================================= */
+
+form { 
+margin : 0; }
+
+fieldset { 
+margin-bottom : 1.5em; 
+padding : 0; 
+border-width : 0; }
+
+legend { 
+*margin-left : -7px; 
+padding : 0; 
+border-width : 0; }
+
+label { 
+font-weight : normal;
+cursor : pointer; }
+
+button, 
+input, 
+select, 
+textarea { 
+font-size : 100%; 
+margin : 0; 
+vertical-align : baseline; 
+*vertical-align : middle; }
+
+button, input { 
+line-height : normal; 
+*overflow : visible; }
+
+button, 
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"] { 
+cursor : pointer; }
+
+input[type="checkbox"], 
+input[type="radio"] { 
+box-sizing : border-box; }
+
+input[type="search"] { 
+box-sizing : content-box; }
+
+button::-moz-focus-inner, 
+input::-moz-focus-inner { 
+padding : 0;
+border : 0;  }
+
+textarea { 
+overflow : auto; 
+vertical-align : top; }
+
+/* Colors for form validity */
+input:valid, 
+textarea:valid   {  
+/* Styles */ }
+
+input:invalid, 
+textarea:invalid {
+-webkit-box-shadow : 0 0 2px rgb(255,0,0); 
+-moz-box-shadow : 0 0 2px rgb(255,0,0);
+box-shadow : 0 0 2px rgb(255,0,0); }
+
+.no-boxshadow input:invalid, 
+.no-boxshadow textarea:invalid {
+background-color : rgb(240,221,221); }
+
+/* 8 BANNER 		============================================================================= */
+header {
+	width:100%;
+	margin:0 auto;
+	height:auto;
+	position:relative;
+}
+#home-page header {
+	min-height:410px;
+}
+header h1, header h2 {
+	display:block;
+	margin-right:auto;
+	margin-left: auto;
+}
+header h1 {
+	width:150px;
+	position:relative;
+	top:20px;
+	color:#ED1C24;
+	text-align:center;
+	z-index:20;
+	text-transform:uppercase;
+	font-size:1em;
+}
+header a#logo-link {
+	display:block;
+	margin:0 auto;
+	width:150px;
+	height:150px;
+	position:relative;
+	color:#ED1C24;
+	z-index:30;
+	background: transparent url('../img/logo.png') top left no-repeat;
+}
+.multiplebgs header h2, .multiplebgs .banner-bg {
+	background:	
+	 			url('../img/banner-bg-left.png') top left no-repeat, 
+				url('../img/banner-bg-right.png') top right no-repeat,
+				url('../img/banner-bg-center.png') top center no-repeat;
+}
+header h2 {
+	width:312px;
+	margin:0 auto;
+	height:35px;
+	text-align:center;
+	background:transparent url('../img/bannerbg.png') top center repeat-x;
+	position:relative;
+	z-index:255;
+}
+
+
+div#featured-product {
+	width:45%;
+	margin-top:15%;
+	margin-right:15%;
+	float:right;
+	clear:both;
+	background:#bfd730;
+	text-align:right;
+	padding:10px;
+	zoom: 1;
+    filter: alpha(opacity=90);
+    opacity: 0.9;
+	
+}
+header h3 {
+	font-size:1em;
+	text-align:right;
+	font-style:italic;
+	color:#fff;
+	margin:0;
+}
+h4.featured-product {
+	margin:0;
+}
+header h5 {
+	margin:0;
+}
+
+/* 9 NAVIGATION 	============================================================================= */
+nav[role="navigation"] ul {
+	width:99%;
+	margin-top:35px;
+}
+
+nav[role="navigation"] ul li.banner-bg {
+	display:block;
+	height:35px;
+	width:285px;
+	margin:10px auto;
+	padding-top:2px;
+	padding-left:15px;
+	text-align:center;
+	list-style:none;
+	font-weight:normal;
+	font-size: 1.2em;
+}
+
+nav[role="navigation"] ul li.banner-bg a {
+	padding:1px 4px;
+}
+
+header nav[role="navigation"] {
+	width:80%;
+	height:20px;
+	margin:0;
+	text-align:left;
+	position:absolute;
+	top:0px;
+	background:transparent;
+	z-index:52;
+}
+
+header nav[role="navigation"] ul {
+	width:40%;
+	list-style:none;
+	margin:0 auto;
+	padding:0;
+	clear:none;
+	position:absolute;
+}
+
+header nav[role="navigation"] ul#shop-navigation-1 {
+	margin-left:15%;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+header nav[role="navigation"] ul#shop-navigation-2 {
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+header nav[role="navigation"] ul#shop-navigation-2 li#view-shopping-cart {
+	float:right;
+}
+
+header nav[role="navigation"] ul li {
+	margin-bottom:5px;
+	font-size:1em;
+}
+
+header nav[role="navigation"] ul li a {
+	color:#000;
+	text-decoration:none;
+	padding:2px 6px;
+}
+
+header nav[role="navigation"] ul li#shop-all-jewelry span, header nav[role="navigation"] ul li#shop-necklaces, header nav[role="navigation"] ul li#shop-bracelets, header nav[role="navigation"] ul li#shop-earrings, header nav[role="navigation"] ul li#cart-items, header nav[role="navigation"] ul li#view-shopping-cart span, header nav[role="navigation"] ul li#checkout {
+	display:none;
+}
+/*
+body#products-page.Bracelets header nav[role="navigation"] ul li#shop-all-jewelry, body#products-page.Necklaces header nav[role="navigation"] ul li#shop-all-jewelry, body#products-page.Earrings header nav[role="navigation"] ul li#shop-all-jewelry {
+	list-style:none;
+}
+
+body.Bracelets header nav[role="navigation"] ul li#shop-bracelets, body.Necklaces header nav[role="navigation"] ul li#shop-necklaces,  body.Earrings header nav[role="navigation"] ul li#shop-earrings, body#products-page header nav[role="navigation"] ul li#shop-all-jewelry {
+	list-style:disc;
+}
+*/
+/* 10 CONTENT 		============================================================================= */
+div.content {
+	width:inherit;
+	margin:0 auto;
+	position:relative;
+	z-index:10;
+}
+
+/* 11 MAIN 			============================================================================= */
+div[role="main"] h3.product-title {
+	font-size:1.1em;
+	font-weight:normal;
+	border:0;
+	font-family: Sathu, proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-decoration:underline;
+	color:#000;
+	padding:2px 4px;
+	margin:10px 15px 0 0;
+}
+div[role="main"] h4.featured-product {
+	clear:both;
+	position:relative;
+	margin:0 auto;
+	top:70px;
+	padding-bottom:60px;
+	width:320px;
+}
+div[role="main"] h4.banner-bg a, div.products h2.banner-bg a {
+	padding: 2px 4px;
+}
+
+div[role="main"] p {
+	padding:10px;
+	text-align:left;
+	line-height:1.5em;
+}
+
+div[role="main"] p.view-link, div.info p {padding-left:0;}
+
+div.products h2.banner-bg {
+	position:relative;
+	top:-20px;
+	height:35px;
+	font-size:1.2em;
+	font-weight:normal;
+	left:-31px;
+	text-align:center;
+	width:313px;
+	margin:0 auto;
+	padding-top:3px;
+}
+
+div.products {
+	background: #fff url('../img/bg-arrow.png') top left repeat-x;
+	border:1px solid #000;
+	width:250px;
+	margin: -15px auto 0 auto;
+	/*padding-top:150px;*/
+	position:relative;
+	z-index:50;
+}
+
+#home-page div.products {
+	margin:10% auto 0 auto;
+}
+
+div.products div.product {
+	max-width:220px;
+	margin:-10px auto 0 auto;
+}
+
+body#products-page div.products div.product {
+	min-height:350px;
+	position:relative;
+}
+
+body#products-page div.products div.product p.product-price {
+	position:absolute;
+	left:5px;
+	margin:0;
+	padding:0;
+}
+
+body#products-page div.pagination {
+	width:100%;
+	clear:both;
+	position:relative;
+	top:20px;
+	padding-bottom:20px;
+	text-align:center;
+}
+
+body#products-page div.pagination span.disabled {
+	display:none;
+}
+
+body#products-page div.pagination span.current {
+	
+}
+
+body#products-page div.pagination a, body#products-page div.pagination span {
+	padding:2px 6px;
+}
+
+div.products h2.banner-bg span {
+	position:absolute;
+	left:-500px;
+}
+
+div.product img.product-img, div.product.not-available .alert-noproducts {
+	width:220px;
+	height:200px;
+}
+
+a.product-a:hover {
+	background-color:#fff;
+}
+
+a.product-a h3.product-title:hover {
+	background-color:#bfd730;
+}
+
+p.view-link a, p.view-link:visited {
+	padding:2px 4px;
+	color: #1777AF;
+}
+
+div#product-content {
+	padding:0px 15px;
+}
+
+div#product-images, div#product-details {
+	float:left;
+	width:100%;
+	position:relative;
+}
+div#product-images a#product-image:hover {
+	background:transparent;
+}
+
+div.product.not-available {
+	position:relative;
+}
+div.product.not-available .alert-noproducts {
+	display:block;
+	background:#BBBEB9 url('../img/arrow-2.png') repeat;
+	margin:0;
+	position:relative;
+	z-index:90;
+}
+
+div.product.not-available .alert-noproducts span {
+	position:absolute !important;
+	bottom:2px !important;
+	left:2px !important;
+	text-align:center;
+}
+
+div#product-images div.sold, div#product-images div.soon, div.not-available div.soon {
+	display: block;
+	display: block;
+	width: 60px;
+	height: 60px;
+	background: #BFD730;
+	border-radius:30px;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	position:absolute;
+	top:0;
+	left:0;
+	text-align:center;
+	z-index:100;
+}
+
+div#product-images div.sold, div#product-images div.soon h4, div.not-available div.soon h4 {
+	color:#1A4D6E;
+	font-size:.8em;
+	font-style:italic;
+	text-transform:uppercase;
+	letter-spacing:.005em;
+}
+
+div#product-images img#product-img {
+	width:99%;
+}
+
+
+/* 12 SHOPPING CART ============================================================================= */
+
+#cart-content {
+  float: left;
+  }
+
+#cart-table {
+  text-align: left;
+  border-collapse: collapse;
+  border-spacing: 0;
+  }
+
+#cart-table td,
+#cart-table th {
+  text-align: left;
+  }
+
+#update-btn-head {
+  display: none;
+  }
+
+
+/* Cart Table Columns --------------------------------------*/
+
+#col-item    { width: 337px; }
+#col-price    { width: 65px; }
+#col-qty    { width: 40px; }
+#col-total    { width: 65px; }
+#col-options  { width: 30px; }
+
+
+/* Cart Table Header ---------------------------------------*/
+
+#cart-head {
+  color: #fff;
+  background: #404040;
+  }
+
+#cart-head th {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  }
+
+#head-item {
+  padding-left: 10px;
+  }
+
+#head-options span {
+  display: none;
+  }
+
+
+/* Cart Table Body -----------------------------------------*/
+
+#cart-body {
+  }
+
+#cart-body th {
+  padding-left: 10px;
+  font-weight: normal;
+  }
+
+#cart-body td {
+  padding: 9px 12px 9px 0;
+  }
+
+#cart-body tr.row-alt th,
+#cart-body tr.row-alt td {
+  background: #f0f0f0;
+  }
+
+#cart-body .item-price {
+  padding-right: 5px;
+  }
+
+#cart-body .item-qty input {
+  width: 2em;
+  }
+
+#cart-body .item-total {
+  font-weight: bold;
+  }
+
+#cart-body .item-options {
+  text-align: center;
+  }
+
+#cart-body .item-options .remove-btn {
+  width: 13px;
+  height: 13px;
+  background: url('http://www.loylewis.com/img/delete.gif') no-repeat;
+  border: none;
+  cursor: pointer;
+  display: block;
+  }
+
+#cart-body .item-options span {
+  display: none;
+  }
+
+
+/* Cart Footer ---------------------------------------------*/
+
+#cart-footer {
+  margin: 10px 0;
+  }
+
+#cart-footer .cart-update {
+  padding: 10px;
+  text-align: right;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  }
+
+#cart-footer .update-btn {
+  width: auto;
+  height: 25px;
+  border: 1px solid #000;
+  background: #eee;
+  cursor: pointer;
+  }
+
+#cart-footer .cart-shipping {
+  float: left;
+  display: inline;
+  margin: -31px 0 0 11px;
+  }
+
+#cart-footer #country {
+  width: 160px;
+  margin-left: 5px;
+  padding: 2px 0;
+  font-size: 11px;
+  }
+
+#cart-footer .cart-discount {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  text-align: right;
+  }
+
+#cart-footer #cart_discount_code {
+  width: 80px;
+  margin-left: 10px;
+  }
+
+#cart-footer .cart-discount p {
+  margin: 1px 0;
+  }
+
+#cart-footer .cart-total {
+  padding: 15px 0;
+  text-align: right;
+  border-bottom: 1px solid #ddd;
+  }
+
+#cart-footer .cart-total h3 {
+  font-size: 16px;
+  margin: 0;
+  }
+
+#cart-footer .cart-total p {
+  margin-bottom: 0;
+  color: #999;
+  }
+
+#cart-footer .cart-total #cart-shipping-tax p {
+  margin-bottom: 7px;
+  color: #666;
+  }
+
+#cart-footer .cart-options {
+  float: right;
+  margin-top: 10px;
+  }
+
+#cart-footer .cart-checkout {
+  float: left;
+  }
+
+#cart-footer .checkout-btn {
+  width: auto;
+  height: 25px;
+  border: 1px solid #000;
+  background: #eee;
+  cursor: pointer;
+  }
+
+#cart-footer .update-btn span,
+#cart-footer .checkout-btn span {
+  }
+
+span.total-discount,
+span.total-shipping {
+  font-weight: bold;
+  }
+
+/* 13 PRODUCT PAGE SLIDESHOW, CONTACT FORM	=============================================================================
+*/
+a#product-image span.icon_zoom {
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  background-image: url({{ 'icon_zoom.png' | theme_image_url }}) !important;
+  background-image: url({{ 'icon_zoom.gif' | theme_image_url }});
+  background-repeat: no-repeat;
+  background-position: -20px;
+  z-index: 101;
+  cursor: pointer;
+  overflow: hidden;
+  }
+
+a#product-image:hover span.icon_zoom {
+  background-position: 0;
+  }
+
+#product-images .product-img {
+  margin: 0 0 10px 0;
+  }
+
+#product-images .images-nav {
+  float: left;
+  position: relative;
+  width: 99%;
+  height: 100px;
+  margin: 10px 0 0 0;
+  background: transparent;
+  }
+
+#product-images .images-list {
+  width: 99%;
+  top: 0;
+  text-align: center;
+  }
+
+#product-images .images-list li {
+  display: inline;
+  padding: 0 5px 0 0;
+  list-style: none;
+	float:left;
+  }
+
+#product-images .images-list li img {
+	height:60px;
+	width:auto;
+}
+
+#product-images .images-prev {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  }
+
+#product-images .images-next {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  }
+
+#product-images .images-prev a {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: url({{ 'btn-prev.gif' | theme_image_url }}) no-repeat;
+  }
+
+#product-images .images-next a {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: url({{ 'btn-next.gif' | theme_image_url }}) no-repeat;
+  }
+
+#product-images .images-prev span,
+#product-images .images-next span {
+  display: none;
+  }
+
+#contact-form {
+  width: 425px;
+  padding: 15px 0;
+  }
+
+#contact-form label {
+  float: left;
+clear:left;
+  width: auto;
+  padding: 10px 10px 2px 10px;
+  font-weight: bold;
+  text-align: left;
+  cursor:default;
+  }
+
+#contact-form input,
+#contact-form textarea {
+  float: left;
+	clear:left;
+width:99%; 
+max-width:220px; 	
+margin: 0 25px 8px 10px;
+  vertical-align: bottom;
+  }
+
+#contact-form textarea {
+  width: 300px;
+  height: 150px;
+  }
+
+#contact-form p,
+#captcha-div {
+  float: left;
+position:relative;
+  display: inline;
+	width:200px;
+  }
+
+#contact-form p {
+  margin-bottom: 25px;
+  }
+
+#contact-submit {
+  clear: both;
+  display: block;
+  width: auto;
+  height: 35px;
+  border: none;
+  background: #eee;
+margin-left:10px;
+border:1px solid #000;
+  cursor: pointer;
+  }
+
+#contact-submit span {
+  }
+
+div#error {
+	width:225px;
+	border:1px solid #ED1C24;
+	background:#FFCCBA;
+	margin:0 auto 20px auto;
+	position:relative;
+}
+
+div#error ul {
+	margin-top:6px;
+	margin-left:35px;
+}
+
+div#error ul:before {
+	content:"!";
+	display:block;
+	background:#ED1C24;
+	color:#fff;
+	font-size:1.5em;
+	font-weight:bold;
+	text-align:center;
+	width:30px;
+	height:30px;
+	border-radius:15px;
+	position:absolute;
+	top:2px;
+	left:5px;
+}
+
+div#error ul li {
+	width:inherit;
+}
+
+/* 14 GLOBAL OBJECTS ============================================================================= */
+
+.clearfix:before, 
+.clearfix:after { 
+content : "\0020"; 
+display : block; 
+height : 0; 
+overflow : hidden; }
+
+.clearfix:after { 
+clear : both; }
+
+/* 15 VENDOR-SPECIFIC ============================================================================= */
+
+html { 
+-webkit-overflow-scrolling : touch; 
+-webkit-tap-highlight-color : rgb(52,158,219); 
+-webkit-text-size-adjust : 100%; 
+-ms-text-size-adjust : 100%; }
+
+.clearfix { 
+zoom : 1; }
+
+::-webkit-selection { 
+background : rgb(23,119,175); 
+color : rgb(250,250,250); 
+text-shadow : none; }
+
+::-moz-selection { 
+background : rgb(23,119,175); 
+color : rgb(250,250,250); 
+text-shadow : none; }
+
+::selection { 
+background : rgb(23,119,175); 
+color : rgb(250,250,250); 
+text-shadow : none; }
+
+button, 
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"] { 
+-webkit-appearance : button; }
+
+::-webkit-input-placeholder {
+font-size : .875em; 
+line-height : 1.4; }
+
+input:-moz-placeholder { 
+font-size : .875em; 
+line-height : 1.4; }
+
+.ie7 img,
+.iem7 img { 
+-ms-interpolation-mode : bicubic; }
+
+input[type="checkbox"], 
+input[type="radio"] { 
+box-sizing : border-box; }
+
+input[type="search"] { 
+-webkit-box-sizing : content-box;
+-moz-box-sizing : content-box; }
+
+button::-moz-focus-inner, 
+input::-moz-focus-inner { 
+padding : 0;
+border : 0; }
+
+p {
+/* http://www.w3.org/TR/css3-text/#hyphenation */
+-webkit-hyphens : auto;
+-webkit-hyphenate-character : "\2010";
+-webkit-hyphenate-limit-after : 1;
+-webkit-hyphenate-limit-before : 3;
+-moz-hyphens : auto; }
+
+/* Non-semantic helper classes 
+
+.ir { display : block; 
+overflow : hidden; 
+background-repeat : no-repeat; 
+text-align : left; 
+text-indent : -999em; 
+direction : ltr; }
+
+.ir br { 
+display : none; }
+
+.hidden { 
+display : none; 
+visibility: hidden; }
+
+.visuallyhidden { 
+position : absolute;
+margin : -1px;
+padding : 0;
+height  : 1px;
+width : 1px;
+overflow : hidden;
+border : 0; 
+clip : rect(0 0 0 0); }
+
+.visuallyhidden.focusable:active, 
+.visuallyhidden.focusable:focus { 
+position: static;
+margin : 0; 
+height : auto; 
+width : auto;
+overflow: visible; 
+clip : auto; }
+
+.invisible { 
+visibility : hidden; } */
+
+/* 16 MODERNIZR ============================================================================= */
+
+/* audio */
+/* applicationcache */
+/* backgroundsize */
+/* borderimage */
+/* borderradius */
+/* boxshadow */
+/* canvas */
+/* canvastext */
+/* cssanimations */
+/* csscolumns */
+/* cssgradients */
+/* cssreflections*/
+/* csstransforms */
+/* csstransforms3d */
+/* csstransitions */
+/* draganddrop */
+/* flexbox */
+/* fontface */
+/* geolocation */
+/* hashchange */
+/* history */
+/* hsla */
+/* indexeddb */
+/* inlinesvg */
+/* localstorage */
+/* multiplebgs */
+/* opacity */
+/* postmessage */
+/* rgba */
+/* sessionstorage */
+/* smil */
+/* svg */
+/* svgclippaths */
+/* textshadow */
+/* touch */
+/* video */
+/* webgl */
+/* websqldatabase */
+/* websockets */
+/* webworkers */
+
+/* 17 TEMPLATE SPECIFICS ============================================================================= */
+
+/* 18 MEDIA QUERIES ============================================================================= */
+
+/* Print */
+@media print {
+
+/* 1 ROOT ============================================================================= */
+
+* { 
+background : transparent !important; 
+color : black !important; 
+text-shadow : none !important; 
+filter : none !important; 
+-ms-filter : none !important; }
+
+@page { 
+margin : 0.5cm; }
+
+/* 2 HEADINGS ============================================================================= */
+
+h2, h3 { 
+orphans : 3; 
+widows : 3; 
+page-break-after : avoid; }
+
+/* 3 TYPOGRAPHY ============================================================================= */
+
+p { 
+orphans : 3; 
+widows : 3; }
+
+pre, blockquote { 
+border : 1px solid #999; 
+page-break-inside : avoid; }
+
+abbr[title]:after { 
+content : " (" attr(title) ")"; }
+
+/* 4 LINKS ============================================================================= */
+
+a, a:visited { 
+color : #444 !important; 
+text-decoration : underline; }
+
+a[href]:after { 
+content : " (" attr(href) ")"; }
+
+a[href^="javascript:"]:after, 
+a[href^="#"]:after { 
+content : ""; } 
+
+/* 5 FIGURES & IMAGES ============================================================================= */
+
+img { 
+max-width : 100% !important;
+page-break-inside : avoid; }
+
+/* 6 TABLES ============================================================================= */
+
+thead { 
+display : table-header-group; } 
+
+tr { 
+page-break-inside : avoid; }
+
+/* 7 FORMS ============================================================================= */
+/* 8 BANNER ============================================================================= */
+/* 9 NAVIGATION ============================================================================= */
+/* 10 CONTENT ============================================================================= */
+/* 11 MAIN ============================================================================= */
+/* 12 COMPLEMENTARY ============================================================================= */
+/* 13 CONTENTINFO ============================================================================= */
+/* 14 GLOBAL OBJECTS ============================================================================= */
+
+.ir a:after { 
+content : ""; } 
+
+/* 15 VENDOR-SPECIFIC ============================================================================= */
+/* 16 MODERNIZR ============================================================================= */
+/* 17 TEMPLATE SPECIFICS ============================================================================= */
+
+}
+
+
+/*between portrait and landscape up to 500*/
+@media only screen and (min-width:420px) and (max-width:500px) {	
+/* 1 ROOT 					============================================================================= */
+
+body { 
+width : 90% /* 436px */; 
+background-size:100%;
+}	
+header nav[role="navigation"] ul {
+	font-size:.9em;
+}
+
+header nav[role="navigation"] ul#shop-navigation-1 {
+	padding-left:20px;
+}
+
+}
+
+/*between 480 and 600*/
+@media only screen and (min-width:480px) and (max-width:675px) {
+	#home-page header h2 {
+	float: left !important;
+	margin-left: -55px !important;
+	margin-top:0 !important;
+	clear: left !important;
+	}
+div#featured-product {
+	margin-top:5%;
+	}		
+	
+}
+
+
+/* 480px */
+@media only screen and (min-width: 480px) { 
+
+/* 1 ROOT 					============================================================================= */
+
+body {
+	width:90%;
+}
+body#home-page { 
+background-size:100%;
+}
+/* 2 HEADINGS 				============================================================================= */
+h2.page-title {
+	padding:25px 10px 0 15px;
+	text-align:left;
+}
+div[role="main"] h3 {
+margin-top:20px;
+}
+div[role="main"] h4.featured-product {
+top:30px;
+}
+
+/* 3 TYPOGRAPHY 			============================================================================= */
+/* 4 LINKS 					============================================================================= */
+/* 5 FIGURES & IMAGES 		============================================================================= */
+/* 6 TABLES 				============================================================================= */
+/* 7 FORMS 					============================================================================= */
+/* 8 BANNER 				============================================================================= */
+
+header {
+	position:relative;
+}
+
+#home-page header {
+	min-height:350px;
+	position:relative;
+	background-size:100%;
+}
+html.borderimage #home-page header {
+	position:relative;
+	top:50px;
+	border-width: 35px;
+	-moz-border-image: url(/img/hero-border-med.png) 37 40 31 37 repeat;
+	-webkit-border-image: url(/img/hero-border-med.png) 37 40 31 37 repeat;
+	-o-border-image: url(/img/hero-border-med.png) 37 40 31 37 repeat;
+	border-image: url(/img/hero-border-med.png) 37 40 31 37 repeat;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+	width:100%;
+	background-size:auto !important;
+	margin-bottom:110px;
+}
+
+header h1, header a#logo-link {
+float:left;
+}
+
+header a#logo-link {
+	margin-top:10px;
+	margin-left:5%;
+}
+html.borderimage #home-page header a#logo-link {
+	margin-top:-75px !important;
+	margin-left:6.3% !important;
+}
+
+header h1 {
+	top:0;
+}
+
+header h2 {
+	float:left;
+	clear:both;
+	position:relative;
+}
+
+#home-page header h2 {
+	float:right;
+	margin-left:2%;
+	clear:none;
+	margin-top:-50px;
+}
+
+div#featured-product {
+	width:35%;
+}
+
+/* 9 NAVIGATION				============================================================================= */
+header nav[role="navigation"] {
+	width:80%;
+	height:auto;
+	margin:0;
+	text-align:right;
+	position:absolute;
+	top:45px;
+	right:0;
+	background:transparent;
+	z-index:52;
+}
+
+header nav[role="navigation"] ul {
+	width:40%;
+	list-style:none;
+	margin:0 auto;
+	padding:0;
+	clear:none;
+	position:absolute;
+}
+
+header nav[role="navigation"] ul#shop-navigation-1 {
+	margin-left:25%;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+header nav[role="navigation"] ul#shop-navigation-2 {
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+header nav[role="navigation"] ul#shop-navigation-2 li#view-shopping-cart {
+	float:right;
+}
+
+header nav[role="navigation"] ul li {
+	margin-bottom:5px;
+	font-size:1em;
+}
+
+header nav[role="navigation"] ul li a {
+	color:#000;
+	text-decoration:none;
+	padding:2px 6px;
+	font-style:italic;
+}
+header nav[role="navigation"] ul li a:before {
+	content:"â€¢   ";
+	color:transparent;
+}
+
+header nav[role="navigation"] ul li#shop-necklaces, header nav[role="navigation"] ul li#shop-bracelets, header nav[role="navigation"] ul li#shop-earrings, header nav[role="navigation"] ul li#cart-items, header nav[role="navigation"] ul li#checkout {
+	display:list-item;
+}
+header nav[role="navigation"] ul li#shop-all-jewelry span, header nav[role="navigation"] ul li#view-shopping-cart span {
+	display:inline;
+}
+
+body#products-page.Bracelets header nav[role="navigation"] ul li#shop-all-jewelry a:before, body#products-page.Necklaces header nav[role="navigation"] ul li#shop-all-jewelry a:before, body#products-page.Earrings header nav[role="navigation"] ul li#shop-all-jewelry a:before {
+	color:transparent;
+}
+
+/*body.Bracelets header nav[role="navigation"] ul li#shop-bracelets, body.Necklaces header nav[role="navigation"] ul li#shop-necklaces,  body.Earrings header nav[role="navigation"] ul li#shop-earrings, body#products-page header nav[role="navigation"] ul li#shop-all-jewelry, body.Bracelets header nav[role="navigation"] ul li#shop-bracelets:hover, body.Necklaces header nav[role="navigation"] ul li#shop-necklaces:hover,  body.Earrings header nav[role="navigation"] ul li#shop-earrings:hover, body#products-page header nav[role="navigation"] ul li#shop-all-jewelry:hover {
+	list-style:disc;
+}*/
+
+body.Bracelets header nav[role="navigation"] ul li#shop-bracelets a:before, body.Necklaces header nav[role="navigation"] ul li#shop-necklaces a:before,  body.Earrings header nav[role="navigation"] ul li#shop-earrings a:before, body#products-page header nav[role="navigation"] ul li#shop-all-jewelry a:before, header nav[role="navigation"] ul li#shop-bracelets a:hover:before, header nav[role="navigation"] ul li#shop-necklaces a:hover:before,  header nav[role="navigation"] ul li#shop-earrings a:hover:before, body#products-page header nav[role="navigation"] ul li#shop-all-jewelry a:hover:before {
+	content:"â€¢   ";
+	color:#000;
+}
+
+/* 10 CONTENT 				============================================================================= */
+
+[role="main"],
+[role="complementary"] {
+margin-bottom : 1.5em;
+padding-bottom  : 1.5em; 
+}
+
+div.content {
+	width:100%;
+}
+
+html.borderimage .content [role="main"] {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+
+div.products { 
+	width:100%;
+}
+
+#home-page div.products {
+	margin-top:10%;
+}
+
+div.products .product {
+	float:left;
+	width:41.667%; /* 200px/480px */
+	padding:2.083%; /*10px/480px*/
+	margin:0;
+}
+
+h2.banner-bg span {
+	position: relative !important;
+	left: 0px !important;
+}
+div.products h2.banner-bg { 
+	width:auto;
+	margin-left:4%;
+	max-width:300px;
+}
+#home-page div.products h2.banner-bg {
+	max-width:450px;
+}
+
+body#products-page div.products div.product p.product-price {
+	padding:10px;
+	bottom:0;
+}
+
+body#products-page div.products div.product {
+	min-height:320px;
+	position:relative;
+}
+
+
+body#product-page h2.page-title {
+	float:right;
+	width:60.5%;
+	display:inline-block;
+	
+}
+
+body#product-page div#product-images {
+	position:relative;
+	top:-45px;
+}
+
+/* 11 MAIN 					============================================================================= */
+[role="main"] {
+	min-height:200px;
+}
+
+div#product-images {
+	width:35%;
+} 
+
+div#product-details {
+	width:62.5%;
+	padding-left:2%;
+}
+
+div#product-details {
+	float:right;
+}
+
+/* 12 IMG SLIDESHOW, CONTACT FORM 		============================================================================= */
+#contact-form textarea {
+max-width: 400px;
+}
+div#error {
+	width:450px;
+	margin:0 0 20px 0;
+}
+/* 13 CONTENTINFO 			============================================================================= */
+
+footer[role="contentinfo"] small {
+float : left;
+display : block;
+width : 57.79%; /* 252 / 436 = .5779 */
+margin : 0; }
+
+footer[role="contentinfo"] ul {
+list-style-type : none;
+float : right;
+width : 36.69%; /* 160 / 436 = .3669 */
+margin : 0;
+padding : 0;
+text-align : right; }
+
+/* 14 GLOBAL OBJECTS 		============================================================================= */
+/* 15 VENDOR-SPECIFIC 		============================================================================= */
+/* 16 MODERNIZR 			============================================================================= */
+/* 17 TEMPLATE SPECIFICS 	============================================================================= */
+}
+@media print {
+
+/* 1 ROOT ============================================================================= */
+
+* { 
+background : transparent !important; 
+color : black !important; 
+text-shadow : none !important; 
+filter : none !important; 
+-ms-filter : none !important; }
+
+@page { 
+margin : 0.5cm; }
+
+/* 2 HEADINGS ============================================================================= */
+
+h2, h3 { 
+orphans : 3; 
+widows : 3; 
+page-break-after : avoid; }
+
+/* 3 TYPOGRAPHY ============================================================================= */
+
+p { 
+orphans : 3; 
+widows : 3; }
+
+pre, blockquote { 
+border : 1px solid #999; 
+page-break-inside : avoid; }
+
+abbr[title]:after { 
+content : " (" attr(title) ")"; }
+
+/* 4 LINKS ============================================================================= */
+
+a, a:visited { 
+color : #444 !important; 
+text-decoration : underline; }
+
+a[href]:after { 
+content : " (" attr(href) ")"; }
+
+a[href^="javascript:"]:after, 
+a[href^="#"]:after { 
+content : ""; } 
+
+/* 5 FIGURES & IMAGES ============================================================================= */
+
+img { 
+max-width : 100% !important;
+page-break-inside : avoid; }
+
+/* 6 TABLES ============================================================================= */
+
+thead { 
+display : table-header-group; } 
+
+tr { 
+page-break-inside : avoid; }
+
+/* 7 FORMS ============================================================================= */
+/* 8 BANNER ============================================================================= */
+/* 9 NAVIGATION ============================================================================= */
+/* 10 CONTENT ============================================================================= */
+/* 11 MAIN ============================================================================= */
+/* 12 COMPLEMENTARY ============================================================================= */
+/* 13 CONTENTINFO ============================================================================= */
+/* 14 GLOBAL OBJECTS ============================================================================= */
+
+.ir a:after { 
+content : ""; } 
+
+/* 15 VENDOR-SPECIFIC ============================================================================= */
+/* 16 MODERNIZR ============================================================================= */
+/* 17 TEMPLATE SPECIFICS ============================================================================= */
+
+}
+
+/* 500px */
+@media only screen and (min-width: 500px) {
+
+/* 1 ROOT 					============================================================================= */
+
+body {
+	height:100%;
+}
+
+/* 2 HEADINGS 				============================================================================= */
+
+
+/* 3 TYPOGRAPHY 			============================================================================= */
+/* 4 LINKS 					============================================================================= */
+/* 5 FIGURES & IMAGES 		============================================================================= */
+/* 6 TABLES 				============================================================================= */
+/* 7 FORMS 					============================================================================= */
+/* 8 BANNER 				============================================================================= */
+#home-page header {
+	min-height:370px;
+}
+#home-page header h2 {
+margin-right:2%;
+}
+/* 9 NAVIGATION				============================================================================= */
+
+/* 10 CONTENT 				============================================================================= */
+
+/* 11 MAIN 					============================================================================= */
+[role="main"] {
+	min-height:250px;
+}
+/* 12 COMPLEMENTARY 		============================================================================= */
+/* 13 CONTENTINFO 			============================================================================= */
+/* 14 GLOBAL OBJECTS 		============================================================================= */
+/* 15 VENDOR-SPECIFIC 		============================================================================= */
+/* 16 MODERNIZR 			============================================================================= */
+/* 17 TEMPLATE SPECIFICS 	============================================================================= */
+
+}
+
+/* 600px */
+@media only screen and (min-width: 600px) {
+
+/* 1 ROOT 					============================================================================= */
+/* 2 HEADINGS 				============================================================================= */
+
+div[role="main"] h4.featured-product {
+top:150px;
+padding-bottom:120px;
+}
+
+/* 3 TYPOGRAPHY 			============================================================================= */
+/* 4 LINKS 					============================================================================= */
+/* 5 FIGURES & IMAGES 		============================================================================= */
+/* 6 TABLES 				============================================================================= */
+/* 7 FORMS 					============================================================================= */
+/* 8 BANNER 				============================================================================= */
+#home-page header {
+	min-height:400px;
+}
+#home-page header h2 {
+margin-right:8%;
+}
+
+/* 9 NAVIGATION				============================================================================= */
+header nav[role="navigation"] ul {
+	width:auto;
+	float:none;
+	position:absolute;
+	top:60px;
+}
+
+header nav[role="navigation"] ul#shop-navigation-1 {
+	margin-left:0;
+	left:55%;
+}
+
+header nav[role="navigation"] ul#shop-navigation-2 {
+	left:80%;
+}
+/* 10 CONTENT 				=============================================================================
+*/
+div.product img.product-img, div.product.not-available .alert-noproducts {
+width: 100%;
+height: 200px;
+}
+div.products .product {
+	width:29%; /* 246.6666px / 800px */
+	margin:1%; /*10px / 800px */
+}
+
+/* 11 MAIN 					============================================================================= */
+
+[role="main"] {
+	min-height:350px;
+}
+/* 12 COMPLEMENTARY 		============================================================================= */
+/* 13 CONTENTINFO 			============================================================================= */
+/* 14 GLOBAL OBJECTS 		============================================================================= */
+/* 15 VENDOR-SPECIFIC 		============================================================================= */
+/* 16 MODERNIZR 			============================================================================= */
+/* 17 TEMPLATE SPECIFICS 	============================================================================= */
+
+}
+
+/* 700px */
+@media only screen and (min-width: 730px) {
+body#product-page div#product-images {
+	position:relative;
+	top:45px;
+}
+}
+
+/* 768px */
+@media only screen and (min-width: 768px) {
+
+/* 1 ROOT 					============================================================================= */
+
+body#home-page { 
+background-size:100%;
+}
+
+/* 2 HEADINGS 				============================================================================= */
+div[role="main"] h3 {
+	font-size:1.5em;
+	
+}
+
+div[role="main"] h4.featured-product {
+top:290px;
+padding-bottom:120px;
+}
+
+/* 3 TYPOGRAPHY 			============================================================================= */
+/* 4 LINKS 					============================================================================= */
+/* 5 FIGURES & IMAGES 		============================================================================= */
+/* 6 TABLES 				============================================================================= */
+/* 7 FORMS 					============================================================================= */
+/* 8 BANNER 				============================================================================= */
+header {
+	max-width:802px;
+}
+html.borderimage header {
+	max-width:800px;
+}
+#home-page header {
+	min-height:440px;
+}
+header a#logo-link {
+	margin-left:10%;
+}
+#home-page header h2 {
+margin-right:10%;
+}
+div#featured-product {
+	width:30%;
+}
+/* 9 NAVIGATION				============================================================================= */
+nav[role="navigation"] {
+	width:100%;
+	max-width:844px;
+	margin:35px auto 30px auto;
+	height:35px;
+	background:	
+	 			url('../img/banner-bg-fleuron-l.png') top left no-repeat, 
+				url('../img/banner-bg-fleuron-r.png') top right no-repeat,
+				url('../img/banner-bg-center-wide.png') top center no-repeat;			
+}
+
+nav[role="navigation"] ul {
+	width:95%;
+	height:auto;
+	margin:0 auto;
+}
+
+nav[role="navigation"] ul li.banner-bg {
+	background:none;
+	display:inline;
+	float:left;
+	margin-top:0;
+/*	margin-right:1.5%;*/
+	margin-bottom:0;
+	margin-left:1.5%;
+	padding-top:2px;
+	height:auto;
+	width:auto;
+	font-size:1.2em;
+}
+nav[role="navigation"] ul li.banner-bg:first-child {
+	margin-left:4%;
+}
+
+/* 10 CONTENT 				============================================================================= */
+.content {
+	max-width:800px;
+}
+
+
+
+div.products div.product {
+max-width: 235px;
+width:30.8%; /* 246.6666px / 800px */
+margin:0;
+padding:1.5%; /*10px/800px*/
+}
+
+/* 11 MAIN 					============================================================================= */
+div[role="main"] {
+	padding-left:10px;
+}
+/* 12 COMPLEMENTARY 		============================================================================= */
+/* 13 CONTENTINFO 			============================================================================= */
+/* 14 GLOBAL OBJECTS 		============================================================================= */
+/* 15 VENDOR-SPECIFIC 		============================================================================= */
+/* 16 MODERNIZR 			============================================================================= */
+/* 17 TEMPLATE SPECIFICS 	============================================================================= */
+
+}
+
+/* 800px */
+@media only screen and (min-width: 800px) {
+
+/* 1 ROOT 					============================================================================= */
+
+body { 
+background-size:auto !important;
+}
+
+/* 2 HEADINGS 				============================================================================= */
+/* 3 TYPOGRAPHY 			============================================================================= */
+/* 4 LINKS 					============================================================================= */
+/* 5 FIGURES & IMAGES 		============================================================================= */
+/* 6 TABLES 				============================================================================= */
+/* 7 FORMS 					============================================================================= */
+/* 8 BANNER 				============================================================================= */
+#home-page header {
+	background-size:auto;
+}
+#home-page header h2 {
+margin-right:13%;
+}
+
+div#featured-product {
+	margin-top:30%;
+	margin-right:18%;
+}
+
+/* 9 NAVIGATION				============================================================================= */
+
+/* 10 CONTENT 				============================================================================= */
+div.products div.product .product-img, div.product.not-available .alert-noproducts {
+	width:235px;
+}
+div.product img.product-img, div.product.not-available .alert-noproducts {
+width: 100%;
+height: 210px;
+}
+/* 11 MAIN 					============================================================================= */
+/* 12 COMPLEMENTARY 		============================================================================= */
+/* 13 CONTENTINFO 			============================================================================= */
+/* 14 GLOBAL OBJECTS 		============================================================================= */
+/* 15 VENDOR-SPECIFIC 		============================================================================= */
+/* 16 MODERNIZR 			============================================================================= */
+/* 17 TEMPLATE SPECIFICS 	============================================================================= */
+
+}
+
+/* 992px */
+@media only screen and (min-width: 992px) {
+
+/* 1 ROOT 					============================================================================= */
+/* 2 HEADINGS 				============================================================================= */
+/* 3 TYPOGRAPHY 			============================================================================= */
+/* 4 LINKS 					============================================================================= */
+/* 5 FIGURES & IMAGES 		============================================================================= */
+/* 6 TABLES 				============================================================================= */
+/* 7 FORMS 					============================================================================= */
+/* 8 BANNER 				============================================================================= */
+/* 9 NAVIGATION				============================================================================= */
+nav[role="navigation"] ul {
+	width:85%;
+}
+nav[role="navigation"] ul li.banner-bg {
+	/*margin:0 2.5%;*/
+}
+nav[role="navigation"] ul li.banner-bg:first-child {
+	margin-left:3.5%;
+}
+
+/* 10 CONTENT 				============================================================================= */
+/* 11 MAIN 					============================================================================= */
+/* 12 COMPLEMENTARY 		============================================================================= */
+/* 13 CONTENTINFO 			============================================================================= */
+/* 14 GLOBAL OBJECTS 		============================================================================= */
+/* 15 VENDOR-SPECIFIC 		============================================================================= */
+/* 16 MODERNIZR 			============================================================================= */
+/* 17 TEMPLATE SPECIFICS 	============================================================================= */
+
+}
+
+/* 1382px */
+@media only screen and (min-width: 1382px) {
+
+/* 1 ROOT 					============================================================================= */
+/* 2 HEADINGS 				============================================================================= */
+/* 3 TYPOGRAPHY 			============================================================================= */
+/* 4 LINKS 					============================================================================= */
+/* 5 FIGURES & IMAGES 		============================================================================= */
+/* 6 TABLES 				============================================================================= */
+/* 7 FORMS 					============================================================================= */
+/* 8 BANNER 				============================================================================= */
+/* 9 NAVIGATION				============================================================================= */
+/* 10 CONTENT 				============================================================================= */
+/* 11 MAIN 					============================================================================= */
+/* 12 COMPLEMENTARY 		============================================================================= */
+/* 13 CONTENTINFO 			============================================================================= */
+/* 14 GLOBAL OBJECTS 		============================================================================= */
+/* 15 VENDOR-SPECIFIC 		============================================================================= */
+/* 16 MODERNIZR 			============================================================================= */
+/* 17 TEMPLATE SPECIFICS 	============================================================================= */
+
+}
+
+/* 2x */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), 
+only screen and (-o-min-device-pixel-ratio: 3/2), 
+only screen and (min-device-pixel-ratio: 1.5) {
+
+/* 1 ROOT 					============================================================================= */
+/* 2 HEADINGS 				============================================================================= */
+header a#logo-link {
+	background: transparent url('../img/logo_retina.png') top left no-repeat;
+	background-size:149px auto;
+}
+/* 3 TYPOGRAPHY 			============================================================================= */
+/* 4 LINKS 					============================================================================= */
+/* 5 FIGURES & IMAGES 		============================================================================= */
+/* 6 TABLES 				============================================================================= */
+/* 7 FORMS 					============================================================================= */
+/* 8 BANNER 				============================================================================= */
+/* 9 NAVIGATION				============================================================================= */
+/* 10 CONTENT 				============================================================================= */
+/* 11 MAIN 					============================================================================= */
+/* 12 COMPLEMENTARY 		============================================================================= */
+/* 13 CONTENTINFO 			============================================================================= */
+/* 14 GLOBAL OBJECTS 		============================================================================= */
+/* 15 VENDOR-SPECIFIC 		============================================================================= */
+/* 16 MODERNIZR 			============================================================================= */
+/* 17 TEMPLATE SPECIFICS 	============================================================================= */
+
+}
